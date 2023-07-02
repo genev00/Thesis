@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".ui.admin.AddEditSiteActivity">
+
+        <TextView
+            android:id="@+id/viewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/add_site"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/siteTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_title"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_title"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteTitleBG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewTitle" />
+
+        <EditText
+            android:id="@+id/siteTitleBG"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_title_bg"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_title_bg"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteProvince"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteTitle" />
+
+        <EditText
+            android:id="@+id/siteProvince"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_province"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_province"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteProvinceBG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteTitleBG" />
+
+        <EditText
+            android:id="@+id/siteProvinceBG"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_province_bg"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_province_bg"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteTown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteProvince" />
+
+        <EditText
+            android:id="@+id/siteTown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_town"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_town"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteTownBG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteProvinceBG" />
+
+        <EditText
+            android:id="@+id/siteTownBG"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_town_bg"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_town_bg"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteTown" />
+
+        <EditText
+            android:id="@+id/siteDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_description"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_description"
+            android:inputType="textMultiLine"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteDescriptionBG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteTownBG" />
+
+        <EditText
+            android:id="@+id/siteDescriptionBG"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_description_bg"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_description_bg"
+            android:inputType="textMultiLine"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteLatitude"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteDescription" />
+
+        <EditText
+            android:id="@+id/siteLatitude"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_latitude"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_latitude"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteLongitude"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteDescriptionBG" />
+
+        <EditText
+            android:id="@+id/siteLongitude"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_longitude"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_longitude"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteImageLinkSt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteLatitude" />
+
+        <EditText
+            android:id="@+id/siteImageLinkSt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_image_link"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_image_link"
+            android:inputType="textUri"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteImageLinkNd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteLongitude" />
+
+        <EditText
+            android:id="@+id/siteImageLinkNd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_image_link"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_image_link"
+            android:inputType="textUri"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/siteImageLinkRd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteImageLinkSt" />
+
+        <EditText
+            android:id="@+id/siteImageLinkRd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autofillHints="@string/site_image_link"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/site_image_link"
+            android:inputType="textUri"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteImageLinkNd" />
+
+        <Switch
+            android:id="@+id/siteIsVisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="@string/site_is_visible"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteImageLinkRd" />
+
+        <Button
+            android:id="@+id/addSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteIsVisible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".ui.sites.SiteDetailsActivity">
+
+        <TextView
+            android:id="@+id/siteDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/site_tile"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="43dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@+id/siteDetailsTitle"
+            app:layout_constraintTop_toTopOf="@+id/siteDetailsTitle"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/googleMapsSite"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/maps_icon" />
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/siteImgSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="224dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteDetailsTitle"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="#5A5A5A"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="1"
+            app:sliderStartAutoCycle="true" />
+
+        <TextView
+            android:id="@+id/siteDetailsProvinceAndTown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/site_province_and_town"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteImgSlider" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/votingContainer"
+            android:layout_width="127dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteImgSlider">
+
+            <ImageView
+                android:id="@+id/oneStar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toStartOf="@+id/twoStar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/star_inactive" />
+
+            <ImageView
+                android:id="@+id/twoStar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toStartOf="@+id/threeStar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/star_inactive" />
+
+            <ImageView
+                android:id="@+id/threeStar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toStartOf="@+id/fourStar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/star_inactive" />
+
+            <ImageView
+                android:id="@+id/fourStar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toStartOf="@+id/fiveStar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/star_inactive" />
+
+            <ImageView
+                android:id="@+id/fiveStar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/star_inactive" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/siteDetailsDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/site_details"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/siteDetailsProvinceAndTown"
+            app:layout_constraintTop_toBottomOf="@+id/siteDetailsProvinceAndTown" />
+
+        <Button
+            android:id="@+id/buttonViewAllComments"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/view_comments"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteDetailsDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
